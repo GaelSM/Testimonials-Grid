@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  background-color: var(--Light-grayish-blue);
+}
+
+main{
+  width: 20.625rem;
+  margin: 4.375rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+section{
+  border-radius: .5rem;
+  padding: 2.25rem;
+  color: var(--White);
+  box-shadow: .2rem .2rem 1rem rgba(0,0,0,0.08);
+}
+
+.information{
+  display: flex;
+  gap: 1rem;
+}
+
+.information p{
+  opacity: 50%;
+}
+
+.image{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image img{
+  width: 100%;
+}
+
+h2{
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+p{
+  font-weight: 300;
+  opacity: 70%;
+  line-height: 1.5;
+}
+
+.violet{
+  background-color: var(--Moderate-violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 2em;
+}
+
+.violet .image{
+  outline: .15rem solid hsl(264, 83%, 70%);
+}
+
+.gray{
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.dark-blue{
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.dark-blue .image{
+  outline: .15rem solid var(--Moderate-violet);
+}
+
+.white{
+  background-color: var(--White);
+  color: var(--Very-dark-blackish-blue);
+}
+
+.white h2, .white h3{
+  color: #4D545E;
+}
+
+/* ----- DESKTOP ----- */
+@media (min-width: 1000px){
+  body{
+    padding: 10rem 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    height: auto;
+  }
+
+  main{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 77.5%;
+    grid-template-areas: 
+    "Daniel Daniel Jonathan Kira"
+    "Jeanette Patrick Patrick Kira"
+    ;
+  }
+
+  .Daniel{
+    grid-area: Daniel;
+  }
+
+  .Jonathan{
+    grid-area: Jonathan;
+  }
+
+  .Kira{
+    grid-area: Kira;
+  }
+
+  .Jeanette{
+    grid-area: Jeanette;
+  }
+
+  .Patrick{
+    grid-area: Patrick;
+  }
+
+  .violet{
+    background-position: top right 20%;
+  }
+}
